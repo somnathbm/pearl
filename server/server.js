@@ -4,6 +4,9 @@ console.log("packageVersion :: " + packageVersion);
 var loopback = require('loopback');
 var boot = require('loopback-boot');
 
+/* -------- for IBM IOT --------------- */
+var Client = require('ibmiotf');
+
 var app = module.exports = loopback();
 
 // ------------ Protecting mobile backend with Mobile Client Access start -----------------
@@ -27,6 +30,45 @@ app.delete('/api/Items/:id', passport.authenticate('mca-backend-strategy', {sess
 app.get('/protected', passport.authenticate('mca-backend-strategy', {session: false}), function(req, res){
 	res.send("Hello, this is a protected resouce of the mobile backend application!");
 });
+
+app.post('/lights', passport.authenticate('mca-backend-strategy', {session: false}), function(req, res){
+	var response = req.body.L;
+        console.log(response);
+        res.send("request received & processed");
+
+        //demo data to send
+        //var myData = { 'name': 'somnath', 'role':  'architect' };
+        //appClient.publishDeviceCommand("pi_mate", "homePi", "status", "json", myData);
+    });
+
+//connect to IBM IOT
+
+//IBM Watson IoT appclient config
+var appClientConfig = {
+    "org": "66jjfx",
+    "id": "1a1ab2e9-4f5a-4db6-9ba3-2da97349a160",
+    "domain": "internetofthings.ibmcloud.com",
+    "auth-method": "apikey",
+    "type": "shared",
+    "auth-key": "a-66jjfx-6kmtipcl3p",
+    "auth-token": "E30s(JzN@ct&yj3RKr"
+};
+
+var appClient = new Client.IotfApplication(appClientConfig);
+appClient.connect();
+
+appClient.on("connect", function(){
+	console.log("app-to-iot connected");
+	// subscribe to device events
+    //appClient.subscribeToDeviceEvents("pi_mate");
+    // subscribe to device status
+    //appClient.subscribeToDeviceStatus("pi_mate");
+});
+
+appClient.on("error", function(){
+	console.log("app-to-iot NOT connected");
+});
+
 // ------------ Protecting backend APIs with Mobile Client Access end -----------------
 
 app.start = function () {
