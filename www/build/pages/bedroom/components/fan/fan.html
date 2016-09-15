@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      FAN
+    </ion-title>
+    <ion-buttons right>
+      <button (click)="closeModal()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page bedroom__fan">
+  <ion-card>
+    <img src="build/images/ceiling_fan2.jpg" />
+    <div class="card-title">Ceiling fan</div>
+    <div class="card_title_divider"></div>
+    <div class="switches">
+      <ion-item>
+        <ion-toggle checked="true"></ion-toggle>
+      </ion-item>
+    </div>
+  </ion-card>
+  <ion-card>
+    <img src="build/images/table_fan.jpg" />
+    <div class="card-title">Wall mounted / table fan</div>
+    <div class="card_title_divider"></div>
+    <div class="switches">
+      <ion-item>
+        <ion-toggle checked="false"></ion-toggle>
+      </ion-item>
+    </div>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      LIGHTS
+    </ion-title>
+    <ion-buttons right>
+      <button (click)="closeModal()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page bedroom__lights">
+  <ion-card>
+    <img src="build/images/chandelier2.jpg" />
+    <div class="card-title">Chandelier lights</div>
+    <div class="card_title_divider"></div>
+    <div class="switches">
+      <ion-item>
+        <ion-toggle ([ngModel])="isChecked" [checked]="isChecked" (ionChange)="switchChange()"></ion-toggle>
+      </ion-item>
+    </div>
+    <div class="more_controlr">
+      <div class="tuner">
+        <button class="button" ([ngModel])="isTuneLight" (click)="adjustAllChandelier()">
+          <ion-icon name="sunny"></ion-icon>
+        </button>
+        <ion-item *ngIf="isTuneLight">
+          <ion-range>
+            <ion-icon range-left small name="sunny"></ion-icon>
+          </ion-range>
+        </ion-item>
+      </div>
+      <div class="custom_controlr">
+        <button class="button">
+          <ion-icon name="arrow-dropdown-circle"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </ion-card>
+</ion-content>

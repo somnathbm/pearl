@@ -1,0 +1,130 @@
+{
+    "AdvancedMobileAccess": [
+        {
+            "credentials": {
+                "serverUrl": "https://imf-authserver.ng.bluemix.net/imf-authserver",
+                "clientId": "e6aa5588-51e0-47ba-acb1-86ceecb83110",
+                "secret": "NjE2MTVjOGYtY2QyYi00MDcyLWJjMDMtMDIyYWI4MjVkOGM4",
+                "tenantId": "e6aa5588-51e0-47ba-acb1-86ceecb83110",
+                "authorizationEndpoint": "https://mobileclientaccess.ng.bluemix.net/oauth/v2/authorization",
+                "tokenEndpoint": "https://mobileclientaccess.ng.bluemix.net/oauth/v2/token",
+                "admin_url": "https://mobile.ng.bluemix.net/imfmobileplatformdashboard/"
+            },
+            "syslog_drain_url": null,
+            "label": "AdvancedMobileAccess",
+            "provider": null,
+            "plan": "Gold",
+            "name": "pearl-AdvancedMobileAccess",
+            "tags": [
+                "mobile",
+                "ibm_created",
+                "ibm_dedicated_public"
+            ]
+        }
+    ],
+    "imfpush": [
+        {
+            "credentials": {
+                "appGuid": "28ae107d-fa59-485e-a8e8-ce22618f24f2",
+                "url": "http://imfpush.ng.bluemix.net/imfpush/v1/apps/28ae107d-fa59-485e-a8e8-ce22618f24f2",
+                "admin_url": "//mobile.ng.bluemix.net/imfpushdashboard/?appGuid=28ae107d-fa59-485e-a8e8-ce22618f24f2",
+                "appSecret": "3c0d0c65-e3bc-451d-a3ba-7c3944eed0f2",
+                "clientSecret": "9c3e2586-927a-4ce3-814a-e93823a835dd"
+            },
+            "syslog_drain_url": null,
+            "label": "imfpush",
+            "provider": null,
+            "plan": "Basic",
+            "name": "pearl-imfpush",
+            "tags": [
+                "mobile",
+                "ibm_created",
+                "ibm_dedicated_public"
+            ]
+        }
+    ],
+    "cloudantNoSQLDB": [
+        {
+            "credentials": {
+                "username": "2576cdae-b052-481b-b409-8f8ec14561fa-bluemix",
+                "password": "cbd62a83c2eb5edada66009ad1a48a009a3fe199aadac04021f8b4133df80e60",
+                "host": "2576cdae-b052-481b-b409-8f8ec14561fa-bluemix.cloudant.com",
+                "port": 443,
+                "url": "https://2576cdae-b052-481b-b409-8f8ec14561fa-bluemix:cbd62a83c2eb5edada66009ad1a48a009a3fe199aadac04021f8b4133df80e60@2576cdae-b052-481b-b409-8f8ec14561fa-bluemix.cloudant.com"
+            },
+            "syslog_drain_url": null,
+            "label": "cloudantNoSQLDB",
+            "provider": null,
+            "plan": "Shared",
+            "name": "pearl-cloudantNoSQLDB",
+            "tags": [
+                "data_management",
+                "ibm_created",
+                "ibm_dedicated_public"
+            ]
+        }
+    ],
+    "AvailabilityMonitoring": [
+        {
+            "credentials": {
+                "pass": "63154066-f489-4a9f-b02c-11c0a68a1a19",
+                "id": "a9c41e48-aa8d-4233-9c76-76689de49420",
+                "url": "https://perfbroker.ng.bluemix.net/1.0/credentials/a9c41e48-aa8d-4233-9c76-76689de49420"
+            },
+            "syslog_drain_url": null,
+            "label": "AvailabilityMonitoring",
+            "provider": null,
+            "plan": "Base",
+            "name": "performance-monitoring-auto",
+            "tags": [
+                "ibm_created",
+                "ibm_beta",
+                "bluemix_extensions",
+                "dev_ops"
+            ]
+        }
+    ],
+    "iotf-service": [
+        {
+            "credentials": {
+                "iotCredentialsIdentifier": "a2g6k39sl6r5",
+                "mqtt_host": "66jjfx.messaging.internetofthings.ibmcloud.com",
+                "mqtt_u_port": 1883,
+                "mqtt_s_port": 8883,
+                "http_host": "66jjfx.internetofthings.ibmcloud.com",
+                "org": "66jjfx",
+                "apiKey": "a-66jjfx-6kmtipcl3p",
+                "apiToken": "E30s(JzN@ct&yj3RKr"
+            },
+            "syslog_drain_url": null,
+            "label": "iotf-service",
+            "provider": null,
+            "plan": "iotf-service-free",
+            "name": "pearl_iot",
+            "tags": [
+                "internet_of_things",
+                "Internet of Things",
+                "ibm_created",
+                "ibm_dedicated_public"
+            ]
+        }
+    ],
+    "mobile-analytics_Prod": [
+        {
+            "credentials": {
+                "apiKey": "ac991fb1-5797-43b3-98f9-4805afdcb55f",
+                "secret": "694b2664-2b4d-4809-a1a6-65b719f6de7a"
+            },
+            "syslog_drain_url": null,
+            "label": "mobile-analytics_Prod",
+            "provider": null,
+            "plan": "lite",
+            "name": "pearl_MA",
+            "tags": [
+                "mobile",
+                "ibm_created",
+                "ibm_beta"
+            ]
+        }
+    ]
+}

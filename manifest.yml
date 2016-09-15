@@ -1,0 +1,14 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: pearl
+  host: pearl
+  disk_quota: 1024M
+  services:
+  - pearl-AdvancedMobileAccess
+  - pearl-imfpush
+  - pearl-cloudantNoSQLDB
+  - pearl_MA
+  - pearl_iot

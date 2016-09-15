@@ -1,0 +1,39 @@
+<ion-menu [content]="content">
+
+  <ion-toolbar primary>
+    <ion-title>Select room</ion-title>
+    <ion-buttons end>
+      <button menuClose>
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-content class="menu_light_accent">
+    <ion-list default>
+       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+    <ion-list class="app_info">
+      <h3>Cierra</h3>
+      <h6>a Celestia Pvt. Ltd. product</h6>
+    </ion-list>
+
+    <ion-buttons class="socialize">
+      <button>
+        <ion-icon name="logo-facebook"></ion-icon>
+      </button>
+      <button>
+        <ion-icon name="logo-twitter"></ion-icon>
+      </button>
+      <button>
+        <ion-icon name="logo-youtube"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content persistent="true" swipeBackEnabled="false"></ion-nav>
